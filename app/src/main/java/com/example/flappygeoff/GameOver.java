@@ -19,7 +19,7 @@ public class GameOver extends AppCompatActivity {
 
         int finalScore = getIntent().getIntExtra("score", 0);
 
-        score.setText("Your Score: " + finalScore + " ms");
+        score.setText("Your Score: " + finalScore);
 
         Button playAgain = findViewById(R.id.playAgain);
 

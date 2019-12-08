@@ -98,7 +98,7 @@ public class GeoffFlyingView extends View {
         } else {
             canvas.drawBitmap(geoff[0], geoffX, geoffY, null);
         }
-        canvas.drawText("Time : " + score + " ms", 20, 80, scorePaint);
+        canvas.drawText("Score : " + score, 20, 80, scorePaint);
     }
 
     public boolean hit(int geoffY, int keyBoardX, int keyBoardY, int highBoardX, int highBoardY){
