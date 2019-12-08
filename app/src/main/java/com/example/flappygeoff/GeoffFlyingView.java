@@ -75,6 +75,7 @@ public class GeoffFlyingView extends View {
 
         if (hit(geoffY, keyBoardX, keyBoardY, highBoardX, highBoardY)) {
             Intent gameOverIntent = new Intent(getContext(), GameOver.class);
+            gameOverIntent.putExtra("score", score);
             gameOverIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             getContext().startActivity(gameOverIntent);
             geoffX = -4000;
@@ -91,7 +92,6 @@ public class GeoffFlyingView extends View {
             highBoardY = keyBoardY - keyBoard.getHeight() - geoff[0].getHeight() - 320;
         }
 
-
         canvas.drawBitmap(keyBoard, keyBoardX, keyBoardY, null);
         canvas.drawBitmap(keyBoard, highBoardX, highBoardY, null);
 
@@ -101,9 +101,7 @@ public class GeoffFlyingView extends View {
         } else {
             canvas.drawBitmap(geoff[0], geoffX, geoffY, null);
         }
-        canvas.drawText("Score : " + score, 20, 80, scorePaint);
-
-
+        canvas.drawText("Time : " + score + " ms", 20, 80, scorePaint);
     }
 
     public boolean hit(int geoffY, int keyBoardX, int keyBoardY, int highBoardX, int highBoardY){
