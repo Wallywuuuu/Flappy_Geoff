@@ -12,9 +12,6 @@ import android.graphics.Typeface;
 import android.view.MotionEvent;
 import android.view.View;
 
-import androidx.constraintlayout.solver.widgets.Rectangle;
-
-
 public class GeoffFlyingView extends View {
     private Bitmap geoff[] = new Bitmap[2] ;
     private int geoffX = 120;
